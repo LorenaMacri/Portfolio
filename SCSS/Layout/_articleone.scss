@@ -1,0 +1,65 @@
+article{
+    font-family: $code-font;
+    .presentation{
+        h1{
+            width: 100%;
+            font-size: 4em;
+            letter-spacing: 0.5em;
+            font-size: $arimo-font;
+            font-weight: 400;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.138);
+            padding: 0.3em;
+            border-bottom: solid 1.5px $black;
+            border-top: solid 1.5px $black;
+            margin-top: 0.5em;
+        }
+        p{
+            font-size: 1.2em;
+            text-align: center;
+            width: 45em;
+            padding: 2em;
+            margin: auto;
+        }
+        ul a{
+            color: $black;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 600;
+            padding: 0.5em 1.5em 0.5em 1.5em;
+            border:solid 1.5px $black;
+            margin:2em 2em 2em 0em;
+            i{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.arrow{
+    margin-top: 5em;
+    width: 100%;
+    border-top: solid 1.5px $black;
+    i{
+        color: $black;
+        text-align: center;
+        padding: 1em;
+        font-size: 1.5em;
+        background-color: $white;
+        border: solid 1.5px $black;
+        border-top: 0;
+    }
+}
+.type-h2{
+    width: 12em;
+    margin: auto;
+    border: solid 1.5px $black;
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+#text-typewrite{
+    text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        color: $black;
+        font-size:0.7em;
+}

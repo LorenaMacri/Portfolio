@@ -1,0 +1,234 @@
+/*VARIABLES*/
+/*RESET and BACKGROUND*/
+* {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-image: url(/background.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 0.5em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dbdbdb;
+}
+
+/*HEADER*/
+.header {
+  font-family: "Source Code Pro", monospace;
+  display: inline-block;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: solid 1.5px #302C30;
+  width: 100%;
+  height: 3.5em;
+  margin-bottom: 1em;
+}
+.header ul {
+  font-weight: 600;
+  font-size: 0.8em;
+  list-style: none;
+  overflow: hidden;
+  margin-right: 3em;
+}
+.header li a {
+  line-height: 2em;
+  color: #302C30;
+  display: block;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 2em;
+  height: 1em;
+  margin: 0em 0em 1em 0em;
+}
+
+.toggle {
+  padding: 1em;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/*MENU*/
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/*SWTICH */
+.switch-button {
+  display: inline-block;
+}
+
+.switch-button .switch-button__checkbox {
+  display: none;
+}
+
+.switch-button .switch-button__label {
+  background-color: #302C30;
+  width: 3em;
+  height: 1.5em;
+  border-radius: 3em;
+  display: inline-block;
+  position: relative;
+}
+
+.switch-button .switch-button__label:before {
+  transition: 0.2s;
+  display: block;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: white;
+  content: "";
+  border-radius: 50%;
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+  background-color: rgb(153, 153, 153);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+  transform: translateX(1.5em);
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+article {
+  font-family: "Source Code Pro", monospace;
+}
+article h1 {
+  width: auto;
+  font-size: 4.5em;
+  letter-spacing: 0.4em;
+  font-size: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.259);
+  padding: 0.3em;
+  border-bottom: solid 1.5px #302C30;
+  border-top: solid 1.5px #302C30;
+  margin-top: 0.5em;
+}
+
+.type-h2 {
+  width: 10em;
+  margin: auto;
+}
+.type-h2 a {
+  text-decoration: none;
+  color: #E1DFDF;
+  font-size: 0.7em;
+}
+
+/*# sourceMappingURL=estilos.css.map */
