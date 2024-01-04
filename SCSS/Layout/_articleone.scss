@@ -2,32 +2,35 @@ article{
     font-family: $code-font;
     .presentation{
         h1{
+            color: $white;
             width: 100%;
             font-size: 4em;
-            letter-spacing: 0.5em;
-            font-size: $arimo-font;
+            letter-spacing: 0.3em;
+            font-size: 6em;
+            font-family: $arimo-font;
             font-weight: 400;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.138);
             padding: 0.3em;
-            border-bottom: solid 1.5px $black;
-            border-top: solid 1.5px $black;
+            border-bottom: solid 3px $white;
+            border-top: solid 1.5px $white;
             margin-top: 0.5em;
         }
         p{
-            font-size: 1.2em;
+            color:$white;
+            font-size: 1.1em;
+            font-weight: 700;
             text-align: center;
             width: 45em;
             padding: 2em;
             margin: auto;
         }
         ul a{
-            color: $black;
+            color: $white;
             text-decoration: none;
             font-size: 1em;
             font-weight: 600;
             padding: 0.5em 1.5em 0.5em 1.5em;
-            border:solid 1.5px $black;
+            border:solid 1.5px $white;
             margin:2em 2em 2em 0em;
             i{
                 margin-right: 10px;
@@ -36,23 +39,23 @@ article{
     }
 }
 .arrow{
-    margin-top: 5em;
+    position: fixed;
+    margin-top: 2.5em;
     width: 100%;
-    border-top: solid 1.5px $black;
+    border-top: solid 1.5px $white;
     i{
-        color: $black;
+        color: $white;
         text-align: center;
         padding: 1em;
         font-size: 1.5em;
-        background-color: $white;
-        border: solid 1.5px $black;
-        border-top: 0;
+        border: solid 1.5px $white;
+        margin-top: 0.5em;
     }
 }
 .type-h2{
     width: 12em;
     margin: auto;
-    border: solid 1.5px $black;
+    border: solid 1.5px $white;
     padding: 0.5em;
     font-size: 1.5em;
 }
@@ -60,6 +63,6 @@ article{
     text-align: center;
         text-decoration: none;
         font-weight: 600;
-        color: $black;
+        color: $white;
         font-size:0.7em;
 }
