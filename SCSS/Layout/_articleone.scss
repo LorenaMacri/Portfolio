@@ -1,5 +1,6 @@
 article{
     font-family: $code-font;
+    position: fixed;
     .presentation{
         h1{
             color: $white;
@@ -33,13 +34,13 @@ article{
             border:solid 1.5px $white;
             margin:2em 2em 2em 0em;
             i{
+                color: $white;
                 margin-right: 10px;
             }
         }
     }
 }
 .arrow{
-    position: fixed;
     margin-top: 2.5em;
     width: 100%;
     border-top: solid 1.5px $white;
@@ -61,8 +62,8 @@ article{
 }
 #text-typewrite{
     text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        color: $white;
-        font-size:0.7em;
+    text-decoration: none;
+    font-weight: 600;
+    color: $white;
+    font-size:0.7em;
 }
