@@ -16,15 +16,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  background: #000;
-}
-
-#particles-js {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: -1;
-  background-color: black;
 }
 
 .cursor {
@@ -74,7 +65,7 @@ body {
   font-family: "Source Code Pro", monospace;
   display: inline-block;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  border-bottom: solid 1.5px #302C30;
+  border-bottom: solid 1.5px rgba(203, 203, 203, 0.723);
   width: 100%;
   height: 3.5em;
   margin-bottom: 1em;
@@ -122,9 +113,10 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-/* menu icon */
+/*Icono */
 .header .menu-icon {
   cursor: pointer;
+  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -159,7 +151,7 @@ body {
   top: -5px;
 }
 
-/* menu btn */
+/*BOTON*/
 .header .menu-btn {
   display: none;
 }
@@ -185,43 +177,7 @@ body {
   top: 0;
 }
 
-/*SWTICH */
-.switch-button {
-  display: inline-block;
-}
-
-.switch-button .switch-button__checkbox {
-  display: none;
-}
-
-.switch-button .switch-button__label {
-  background-color: rgba(203, 203, 203, 0.723);
-  width: 3em;
-  height: 1.5em;
-  border-radius: 3em;
-  display: inline-block;
-  position: relative;
-}
-
-.switch-button .switch-button__label:before {
-  transition: 0.2s;
-  display: block;
-  position: absolute;
-  width: 1.5em;
-  height: 1.5em;
-  background-color: white;
-  content: "";
-  border-radius: 50%;
-}
-
-.switch-button .switch-button__checkbox:checked + .switch-button__label {
-  background-color: rgb(153, 153, 153);
-}
-
-.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
-  transform: translateX(1.5em);
-}
-
+/*responsive*/
 @media (min-width: 48em) {
   .header li {
     float: left;
@@ -240,7 +196,6 @@ body {
 }
 article {
   font-family: "Source Code Pro", monospace;
-  position: fixed;
 }
 article .presentation h1 {
   color: rgba(203, 203, 203, 0.723);
@@ -275,7 +230,6 @@ article .presentation ul a {
   margin: 2em 2em 2em 0em;
 }
 article .presentation ul a i {
-  color: rgba(203, 203, 203, 0.723);
   margin-right: 10px;
 }
 

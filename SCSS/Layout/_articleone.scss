@@ -1,6 +1,5 @@
 article{
     font-family: $code-font;
-    position: fixed;
     .presentation{
         h1{
             color: $white;
@@ -34,7 +33,6 @@ article{
             border:solid 1.5px $white;
             margin:2em 2em 2em 0em;
             i{
-                color: $white;
                 margin-right: 10px;
             }
         }
