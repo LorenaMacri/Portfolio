@@ -2,7 +2,7 @@
 $code-font:'Source Code Pro', monospace;
 $arimo-font:'Bebas Neue', sans-serif;
 $black:#302C30;
-$white: rgba(203, 203, 203, 0.723);
+$white: rgba(255, 255, 255, 0.877);
 $grey: rgb(153, 153, 153);
 
 /*RESET and BACKGROUND*/
@@ -22,28 +22,51 @@ body{
     margin: 0;
     padding: 0;
 }
-.cursor{
-    position: fixed;
-    left:10px;
-    width: 30px;
-    height: 30px;
-    transform: translate(-50%,-50%);
-    background-color: rgb(255, 255, 255);
-    mix-blend-mode:difference;
-    border-radius: 50%;
+.container{
     pointer-events: none;
-    transition: width 0.5s, height 0.5s;
+    backdrop-filter: blur(0.75px);
 }
-.cursor2{
-    position: fixed;
-    left:10px;
-    width: 40px;
-    height: 40px;
-    transform: translate(-50%,-50%);
-    border:solid 1px rgb(255, 255, 255);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: 0.1s;
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background:#0f0e0e;
+    filter: saturate(2);
+}
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 1px;
+    background:rgb(4, 0, 9);;
+    &:hover{
+        background: rgb(63, 2, 134);
+        transition-duration:0s ;
+    }
+}
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(106, 0, 228);
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+@keyframes animBack{
+    0%{
+        top: -60%;
+    }
+    100%{
+        top:120%;
+    }
 }
 ::-webkit-scrollbar { width: 0.5em;}
 ::-webkit-scrollbar-track {background: #ffffff;}

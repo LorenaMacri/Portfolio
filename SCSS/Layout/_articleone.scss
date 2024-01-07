@@ -1,5 +1,6 @@
 article{
     font-family: $code-font;
+    pointer-events: none;
     .presentation{
         h1{
             color: $white;
@@ -64,4 +65,8 @@ article{
     font-weight: 600;
     color: $white;
     font-size:0.7em;
+}
+.social_links{
+    cursor: pointer;
+    pointer-events: all;
 }

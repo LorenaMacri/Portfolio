@@ -18,31 +18,56 @@ body {
   padding: 0;
 }
 
-.cursor {
-  position: fixed;
-  left: 10px;
-  width: 30px;
-  height: 30px;
-  transform: translate(-50%, -50%);
-  background-color: rgb(255, 255, 255);
-  mix-blend-mode: difference;
-  border-radius: 50%;
+.container {
   pointer-events: none;
-  transition: width 0.5s, height 0.5s;
+  backdrop-filter: blur(0.75px);
 }
 
-.cursor2 {
-  position: fixed;
-  left: 10px;
-  width: 40px;
-  height: 40px;
-  transform: translate(-50%, -50%);
-  border: solid 1px rgb(255, 255, 255);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: 0.1s;
+.bgAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background: #0f0e0e;
+  filter: saturate(2);
 }
 
+.colorBox {
+  z-index: 2;
+  filter: brightness(1.1);
+  transition: 2s ease;
+  position: relative;
+  margin: 1px;
+  background: rgb(4, 0, 9);
+}
+.colorBox:hover {
+  background: rgb(63, 2, 134);
+  transition-duration: 0s;
+}
+
+.backgroundAmim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(106, 0, 228);
+  filter: blur(60px);
+  animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+  0% {
+    top: -60%;
+  }
+  100% {
+    top: 120%;
+  }
+}
 ::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -63,11 +88,12 @@ body {
 /*HEADER*/
 .header {
   font-family: "Source Code Pro", monospace;
+  position: relative;
+  pointer-events: all;
   display: inline-block;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  border-bottom: solid 1.5px rgba(203, 203, 203, 0.723);
+  border-bottom: solid 1.5px rgba(255, 255, 255, 0.877);
   width: 100%;
-  height: 3.5em;
   margin-bottom: 1em;
 }
 .header ul {
@@ -77,15 +103,19 @@ body {
   overflow: hidden;
   margin-right: 3em;
 }
+.header ul li {
+  position: relative;
+  pointer-events: all;
+}
 .header li a {
   line-height: 2em;
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   display: block;
   text-decoration: none;
 }
 
 .theme-icons {
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
 }
 
 .logo img {
@@ -116,8 +146,8 @@ body {
 /*Icono */
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
-  float: right;
+  display: flex;
+  justify-content: end;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -177,8 +207,11 @@ body {
   top: 0;
 }
 
-/*responsive*/
+/*responsive cuando llega el menu normal*/
 @media (min-width: 48em) {
+  .header {
+    height: 4em;
+  }
   .header li {
     float: left;
   }
@@ -196,9 +229,10 @@ body {
 }
 article {
   font-family: "Source Code Pro", monospace;
+  pointer-events: none;
 }
 article .presentation h1 {
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   width: 100%;
   font-size: 4em;
   letter-spacing: 0.3em;
@@ -207,12 +241,12 @@ article .presentation h1 {
   font-weight: 400;
   text-align: center;
   padding: 0.3em;
-  border-bottom: solid 3px rgba(203, 203, 203, 0.723);
-  border-top: solid 1.5px rgba(203, 203, 203, 0.723);
+  border-bottom: solid 3px rgba(255, 255, 255, 0.877);
+  border-top: solid 1.5px rgba(255, 255, 255, 0.877);
   margin-top: 0.5em;
 }
 article .presentation p {
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   font-size: 1.1em;
   font-weight: 700;
   text-align: center;
@@ -221,12 +255,12 @@ article .presentation p {
   margin: auto;
 }
 article .presentation ul a {
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   text-decoration: none;
   font-size: 1em;
   font-weight: 600;
   padding: 0.5em 1.5em 0.5em 1.5em;
-  border: solid 1.5px rgba(203, 203, 203, 0.723);
+  border: solid 1.5px rgba(255, 255, 255, 0.877);
   margin: 2em 2em 2em 0em;
 }
 article .presentation ul a i {
@@ -236,21 +270,21 @@ article .presentation ul a i {
 .arrow {
   margin-top: 2.5em;
   width: 100%;
-  border-top: solid 1.5px rgba(203, 203, 203, 0.723);
+  border-top: solid 1.5px rgba(255, 255, 255, 0.877);
 }
 .arrow i {
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   text-align: center;
   padding: 1em;
   font-size: 1.5em;
-  border: solid 1.5px rgba(203, 203, 203, 0.723);
+  border: solid 1.5px rgba(255, 255, 255, 0.877);
   margin-top: 0.5em;
 }
 
 .type-h2 {
   width: 12em;
   margin: auto;
-  border: solid 1.5px rgba(203, 203, 203, 0.723);
+  border: solid 1.5px rgba(255, 255, 255, 0.877);
   padding: 0.5em;
   font-size: 1.5em;
 }
@@ -259,8 +293,13 @@ article .presentation ul a i {
   text-align: center;
   text-decoration: none;
   font-weight: 600;
-  color: rgba(203, 203, 203, 0.723);
+  color: rgba(255, 255, 255, 0.877);
   font-size: 0.7em;
+}
+
+.social_links {
+  cursor: pointer;
+  pointer-events: all;
 }
 
 /*# sourceMappingURL=estilo.css.map */
