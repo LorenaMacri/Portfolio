@@ -1,17 +1,14 @@
 /*HEADER*/
 .header {
   font-family: $code-font;
-
   position: relative;
   pointer-events: all;
-
-  display:inline-block;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  border-bottom: solid 1.5px $white;
+ border-bottom: solid 1px $white;
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  transition: 1s;
   ul {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.95em;
     list-style: none;
     overflow: hidden;
@@ -24,10 +21,14 @@
     }
   }
   li a {
+    color: $pink-purple;
     line-height: 2em;
-    color: $white;
     display: block;
     text-decoration: none;
+    transition: .1s;
+    &:hover{
+      color:rgba(255, 255, 255, 0.889);
+    }
   }
 }
 .theme-icons{

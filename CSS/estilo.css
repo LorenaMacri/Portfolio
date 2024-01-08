@@ -45,7 +45,7 @@ body {
   background: rgb(4, 0, 9);
 }
 .colorBox:hover {
-  background: rgb(63, 2, 134);
+  background: rgb(47, 0, 102);
   transition-duration: 0s;
 }
 
@@ -90,14 +90,13 @@ body {
   font-family: "Source Code Pro", monospace;
   position: relative;
   pointer-events: all;
-  display: inline-block;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  border-bottom: solid 1.5px rgba(255, 255, 255, 0.877);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.882);
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  transition: 1s;
 }
 .header ul {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.95em;
   list-style: none;
   overflow: hidden;
@@ -108,14 +107,18 @@ body {
   pointer-events: all;
 }
 .header li a {
+  color: rgb(155, 0, 244);
   line-height: 2em;
-  color: rgba(255, 255, 255, 0.877);
   display: block;
   text-decoration: none;
+  transition: 0.1s;
+}
+.header li a:hover {
+  color: rgba(255, 255, 255, 0.889);
 }
 
 .theme-icons {
-  color: rgba(255, 255, 255, 0.877);
+  color: rgba(255, 255, 255, 0.882);
 }
 
 .logo img {
@@ -230,38 +233,44 @@ body {
 article {
   font-family: "Source Code Pro", monospace;
   pointer-events: none;
+  position: relative;
 }
 article .presentation h1 {
-  color: rgba(255, 255, 255, 0.877);
+  color: rgb(155, 0, 244);
   width: 100%;
-  font-size: 4em;
   letter-spacing: 0.3em;
-  font-size: 6em;
+  font-size: 6.5em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
   padding: 0.3em;
-  border-bottom: solid 3px rgba(255, 255, 255, 0.877);
-  border-top: solid 1.5px rgba(255, 255, 255, 0.877);
-  margin-top: 0.5em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.882);
+  border-top: solid 1px rgba(255, 255, 255, 0.882);
+  margin-top: 0.3em;
+  transition: 1s;
 }
 article .presentation p {
-  color: rgba(255, 255, 255, 0.877);
+  color: rgba(255, 255, 255, 0.882);
   font-size: 1.1em;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
   width: 45em;
   padding: 2em;
   margin: auto;
 }
 article .presentation ul a {
-  color: rgba(255, 255, 255, 0.877);
+  color: rgba(255, 255, 255, 0.882);
   text-decoration: none;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 400;
   padding: 0.5em 1.5em 0.5em 1.5em;
-  border: solid 1.5px rgba(255, 255, 255, 0.877);
+  border: solid 1px rgba(255, 255, 255, 0.882);
   margin: 2em 2em 2em 0em;
+  transition: 0.2s;
+}
+article .presentation ul a:hover {
+  color: rgb(155, 0, 244);
+  border-color: rgb(155, 0, 244);
 }
 article .presentation ul a i {
   margin-right: 10px;
@@ -270,21 +279,20 @@ article .presentation ul a i {
 .arrow {
   margin-top: 2.5em;
   width: 100%;
-  border-top: solid 1.5px rgba(255, 255, 255, 0.877);
+  border-top: solid 1px rgba(255, 255, 255, 0.882);
 }
 .arrow i {
-  color: rgba(255, 255, 255, 0.877);
+  color: rgba(255, 255, 255, 0.882);
   text-align: center;
   padding: 1em;
   font-size: 1.5em;
-  border: solid 1.5px rgba(255, 255, 255, 0.877);
   margin-top: 0.5em;
 }
 
 .type-h2 {
   width: 12em;
   margin: auto;
-  border: solid 1.5px rgba(255, 255, 255, 0.877);
+  border: solid 1px rgba(255, 255, 255, 0.882);
   padding: 0.5em;
   font-size: 1.5em;
 }
@@ -292,8 +300,8 @@ article .presentation ul a i {
 #text-typewrite {
   text-align: center;
   text-decoration: none;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.877);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.882);
   font-size: 0.7em;
 }
 
