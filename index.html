@@ -54,7 +54,7 @@
        
         <ul  class="social_links d-flex justify-content-center">
           <li><a href="#"><i class="fa-brands fa-github"></i>GitHub</a></li>
-          <li><a href="#"><i class="fa-solid fa-file-arrow-down"></i>Curriculum</a></li>
+          <li><a href="/LorenaMacriCURRICULUM.pdf" download><i class="fa-solid fa-file-arrow-down"></i>Curriculum</a></li>
           <li><a href="#"><span><i class="fa-brands fa-linkedin"></i></span>LinkedIn</a></li>
         </ul>
 
@@ -68,99 +68,11 @@
 
   </div>
 
+  <!--SCRIPTS-->
     <script src="/background.js"></script>
     <script src="https://kit.fontawesome.com/ee46ddff60.js" crossorigin="anonymous"></script>
+    <script src="/typewrite.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
-<script>
-  let cursor = document.querySelector('.cursor');
-  let cursor2 = document.querySelector('.cursor2');
-  
-  document.addEventListener('mousemove',moveCursor);
-
-  function moveCursor(e){
-    let x = e.clientX;
-    let y = e.clientY;
-
-    cursor.style.left = `${x}px`;
-    cursor.style.top = `${y}px`;
-
-    cursor2.style.left = `${x}px`;
-    cursor2.style.top = `${y}px`;
-  }
-
-  let links = Array.from(document.querySelectorAll("a"));
-  console.log(links);
-
-  links.forEach(link=>{
-
-    link.addEventListener('mouseover',()=>{
-      cursor.classList.add("grow");
-    });
-    link.addEventListener('mouseleave',()=>{
-      cursor.classList.remove("grow");
-    });
-
-  });
-</script>
-
-<script>
-  var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 7) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 150 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.1em solid #ffff}";
-        document.body.appendChild(css);
-    };
- </script>
+ 
   </body>
 </html>

@@ -1,0 +1,32 @@
+/*responsive cuando llega el menu normal*/
+@media (min-width: 48em) {
+
+    /*HEADER*/
+    .header{
+      height: 4em;
+      li {
+        float: left;
+        a {
+          padding: 20px 30px;
+        }
+      }
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+
+    /*ARTICLE*/       
+    .presentation{
+            h1{
+                font-size: 6.5em;
+                padding: 0.3em;
+                transition: 1s;
+            }
+        }
+
+}

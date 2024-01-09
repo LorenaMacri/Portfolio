@@ -3,7 +3,7 @@
   font-family: $code-font;
   position: relative;
   pointer-events: all;
- border-bottom: solid 1px $white;
+  border-bottom: solid 1px $white;
   width: 100%;
   margin-bottom: 2em;
   transition: 1s;
@@ -69,7 +69,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: $white;
   display: block;
   height: 2px;
   position: relative;
@@ -79,7 +79,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: $white;
   content: '';
   display: block;
   height: 100%;
@@ -121,24 +121,4 @@
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
-}
-/*responsive cuando llega el menu normal*/
-@media (min-width: 48em) {
-  .header{
-    height: 4em;
-    li {
-      float: left;
-      a {
-        padding: 20px 30px;
-      }
-    }
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
 }

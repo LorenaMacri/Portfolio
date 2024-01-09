@@ -157,7 +157,7 @@ body {
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: rgba(255, 255, 255, 0.882);
   display: block;
   height: 2px;
   position: relative;
@@ -167,7 +167,7 @@ body {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: rgba(255, 255, 255, 0.882);
   content: "";
   display: block;
   height: 100%;
@@ -210,26 +210,6 @@ body {
   top: 0;
 }
 
-/*responsive cuando llega el menu normal*/
-@media (min-width: 48em) {
-  .header {
-    height: 4em;
-  }
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
 article {
   font-family: "Source Code Pro", monospace;
   pointer-events: none;
@@ -239,7 +219,7 @@ article .presentation h1 {
   color: rgb(155, 0, 244);
   width: 100%;
   letter-spacing: 0.3em;
-  font-size: 6.5em;
+  font-size: 4em;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   text-align: center;
@@ -308,6 +288,34 @@ article .presentation ul a i {
 .social_links {
   cursor: pointer;
   pointer-events: all;
+}
+
+/*responsive cuando llega el menu normal*/
+@media (min-width: 48em) {
+  /*HEADER*/
+  .header {
+    height: 4em;
+  }
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  /*ARTICLE*/
+  .presentation h1 {
+    font-size: 6.5em;
+    padding: 0.3em;
+    transition: 1s;
+  }
 }
 
 /*# sourceMappingURL=estilo.css.map */
