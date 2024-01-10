@@ -395,9 +395,12 @@ footer i {
     width: 45em;
     margin: auto;
   }
-  article .presentation ul a {
-    font-size: 1em;
-    font-weight: 400;
+  article .presentation li .social-icon {
+    font-size: 1.1em;
+    margin-right: 10px;
+  }
+  article .presentation li a {
+    font-size: 1.1em;
   }
   .type-h2 {
     font-size: 1.5em;

@@ -1,63 +1,69 @@
 /*responsive cuando llega el menu normal*/
 @media (min-width: 48em) {
 
-    /*HEADER*/
-    .header{
-      height: 4em;
-      li {
-        float: left;
-        a {
-          padding: 20px 30px;
-        }
+  /*HEADER*/
+  .header{
+    height: 4em;
+    li {
+      float: left;
+      a {
+        padding: 20px 30px;
       }
     }
-    .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .header .menu-icon {
-      display: none;
-    }
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 
-    /*ARTICLE*/       
-    article{
-            .presentation{
-                h1{
-                    font-size: 6.5em;
-                    padding: 0.3em;
-                    transition: 1s;
-                }
-                p{
+  /*ARTICLE*/       
+  article{
+         .presentation{
+              h1{
+                  font-size: 6.5em;
+                  padding: 0.3em;
+                  transition: 1s;
+              }
+              p{
+                font-size: 1.1em;
+                width: 45em;
+                margin: auto;
+             }
+             li{
+              .social-icon{
                   font-size: 1.1em;
-                  width: 45em;
-                  margin: auto;
+                  margin-right: 10px;
+              }
+              a{
+                  font-size: 1.1em;
                }
-               ul a{
-                font-size: 1em;
-                font-weight: 400;
-            }
-            }
-        }.type-h2{
-  font-size: 1.5em;
+          }
+          }
+      }
+.type-h2{
+font-size: 1.5em;
 }
 .aboutme{
-  margin: auto;
-  width: 40em;
-    h6{
-        font-size: 4em;
-        padding: 0.2em;
-    }
-    .aboutme-text1,.aboutme-text2{
-        margin: 1em;
-        font-family: $code-font;
-        font-size: 1.1em;
-    }
-    .explore{
-        font-size: 1.1em;
-    }
-    .arrow-aboutme{
-        font-size: 1.1em;
-    }
+margin: auto;
+width: 40em;
+  h6{
+      font-size: 4em;
+      padding: 0.2em;
   }
+  .aboutme-text1,.aboutme-text2{
+      margin: 1em;
+      font-family: $code-font;
+      font-size: 1.1em;
+  }
+  .explore{
+      font-size: 1.1em;
+  }
+  .arrow-aboutme{
+      font-size: 1.1em;
+  }
+}
 }
