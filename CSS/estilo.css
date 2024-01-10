@@ -240,15 +240,17 @@ article .presentation p {
   margin: auto;
 }
 article .presentation li {
+  display: flex;
   font-family: "Source Code Pro", monospace;
-  padding: 0.5em 1.5em 0.5em 1.5em;
+  padding: 0.5em 1em 0.5em 1em;
   border: solid 1px rgba(255, 255, 255, 0.882);
   margin: 1em 1em 1em 0em;
   transition: 0.2s;
 }
 article .presentation li .social-icon {
+  font-size: 0.7em;
   color: rgba(255, 255, 255, 0.882);
-  margin-right: 10px;
+  margin-right: 5px;
 }
 article .presentation li a {
   font-size: 0.7em;
