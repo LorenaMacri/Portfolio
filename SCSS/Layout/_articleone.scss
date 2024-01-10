@@ -1,13 +1,13 @@
 article{
-    font-family: $code-font;
     pointer-events: none;
     position: relative;
     .presentation{
+       //display: none;
         h1{
             color: rgb(155, 0, 244);
             width: 100%;
             letter-spacing: 0.3em;
-            font-size: 4em;
+            font-size: 5em;
             font-family: $arimo-font;
             font-weight: 400;
             text-align: center;
@@ -18,18 +18,19 @@ article{
             transition: 1s;
         }
         p{
+            font-family: $code-font;
             color:$white;
-            font-size: 1.1em;
+            font-size: 0.9em;
             font-weight: 400;
             text-align: center;
-            width: 45em;
             padding: 2em;
             margin: auto;
         }
         ul a{
+            font-family: $code-font;
             color: $white;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 0.8em;
             font-weight: 400;
             padding: 0.5em 1.5em 0.5em 1.5em;
             border:solid 1px $white;
@@ -40,6 +41,7 @@ article{
                 border-color: $pink-purple;
             }
             i{
+                font-family: $code-font;
                 margin-right: 10px;
             }
         }
@@ -47,9 +49,13 @@ article{
 }
 .arrow{
     margin-top: 2.5em;
+    margin-bottom: 2em;
     width: 100%;
     border-top: solid 1px $white;
+    border-bottom: solid 1px $white;
+    text-decoration: none;
     i{
+        text-decoration: none;
         color: $white;
         text-align: center;
         padding: 1em;
@@ -62,7 +68,9 @@ article{
     margin: auto;
     border: solid 1px $white;
     padding: 0.5em;
-    font-size: 1.5em;
+    font-size: 0.9em;
+    font-family: $code-font;
+    background-color: $transparent-detail;
 }
 #text-typewrite{
     text-align: center;
@@ -74,4 +82,63 @@ article{
 .social_links{
     cursor: pointer;
     pointer-events: all;
+}
+
+.aboutme{
+    margin: 2em;
+    background-color: $transparent-detail;
+    border: solid 1px $white;
+    h6 span:first-child{
+        color: $white;
+    }
+    h6 span:last-child{
+        color: $purple;
+    }
+    h6{
+        font-family:$arimo-font;
+        font-size: 3em;
+        letter-spacing: 0.3em;
+        padding: 0.3em;
+        margin-bottom: -0.3em;
+    }
+    .aboutme-text1,.aboutme-text2{
+        color: $white;
+        padding: 0.5em;
+        margin: 1em;
+        font-family: $code-font;
+        font-size: 0.9em;
+        text-align: left;
+    }
+    .aboutme-text2{
+        font-weight: 600;
+    }
+    .redirect1{
+        background-color: $pink-purple;
+    }
+    .explore{
+        padding: 0.3em;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+        font-size: 0.9em;
+        font-family: $code-font;
+    }
+    .arrow-aboutme{
+        color: $white;
+        padding: 0em 0em 0.5em 0em;
+        font-size: 0.9em;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+footer{
+    margin-top: 2em;
+    border-top: solid 1.5px $white;
+    border-bottom: solid 1.5px $white;
+    i{
+        color: $white;
+        font-size: 2em;
+        margin: 1.5em;
+    }
 }

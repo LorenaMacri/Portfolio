@@ -21,12 +21,43 @@
     }
 
     /*ARTICLE*/       
-    .presentation{
-            h1{
-                font-size: 6.5em;
-                padding: 0.3em;
-                transition: 1s;
+    article{
+            .presentation{
+                h1{
+                    font-size: 7em;
+                    padding: 0.3em;
+                    transition: 1s;
+                }
+                p{
+                  font-size: 1.1em;
+                  width: 45em;
+                  margin: auto;
+               }
+               ul a{
+                font-size: 1em;
+                font-weight: 400;
             }
-        }
-
+            }
+        }.type-h2{
+  font-size: 1.5em;
+}
+.aboutme{
+  margin: auto;
+  width: 40em;
+    h6{
+        font-size: 4em;
+        padding: 0.2em;
+    }
+    .aboutme-text1,.aboutme-text2{
+        margin: 1em;
+        font-family: $code-font;
+        font-size: 1.1em;
+    }
+    .explore{
+        font-size: 1.1em;
+    }
+    .arrow-aboutme{
+        font-size: 1.1em;
+    }
+  }
 }

@@ -3,10 +3,10 @@ $code-font:'Source Code Pro', monospace;
 $arimo-font:'Bebas Neue', sans-serif;
 $black:#302C30;
 $white: rgba(255, 255, 255, 0.882);
-$grey: rgb(153, 153, 153);
 $purple: #6a00e4;
 $pink-purple:rgb(155, 0, 244);
-
+$transparent-detail:rgba(121, 121, 121, 0.193);
+$transparent-purple: #41008b4a;
 /*RESET and BACKGROUND*/
 *{
     box-sizing: border-box;
@@ -16,20 +16,22 @@ $pink-purple:rgb(155, 0, 244);
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
 }
+html, body{
+    overflow:initial !important;
+  }
+
 body{
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
     min-height: 100vh;
     margin: 0;
     padding: 0;
 }
-.container{
+.container-fluid{
     pointer-events: none;
     backdrop-filter: blur(0.75px);
 }
 .bgAnimation{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -53,7 +55,7 @@ body{
     }
 }
 .backgroundAmim{
-    position: absolute;
+position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -70,10 +72,10 @@ body{
         top:120%;
     }
 }
-::-webkit-scrollbar { width: 0.5em;}
-::-webkit-scrollbar-track {background: #ffffff;}
-::-webkit-scrollbar-thumb {background: #666666;border-radius: 0.5em;}
-::-webkit-scrollbar-thumb:hover {background: #dbdbdb;}
+::-webkit-scrollbar { width: 10px; position: absolute;}
+::-webkit-scrollbar-track {background: $black;}
+::-webkit-scrollbar-thumb {background: $purple;}
+::-webkit-scrollbar-thumb:hover {background: $pink-purple;}
 
 @import './Layout/header';
 @import './Layout/articleone';
