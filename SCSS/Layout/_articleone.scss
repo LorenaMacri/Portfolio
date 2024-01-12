@@ -90,8 +90,9 @@ article{
     cursor: pointer;
     pointer-events: all;
 }
-
+/*ABOUT ME*/
 .aboutme{
+   // display: none;
     margin: 2em;
     background-color: $transparent-detail;
     border: solid 1px $white;
@@ -137,6 +138,71 @@ article{
         text-decoration: none;
         text-align: center;
     }
+}
+/*STACK Y EDUACION*/
+.stack-edu{
+    margin-top: 4em;
+    h6{
+        justify-content: center;
+        font-family: $arimo-font;
+        text-decoration: none;
+        font-size: 3em;
+        color:$white;
+    }
+}
+.stack-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .stack-div{
+        background: $transparent-detail;
+        justify-content: center;
+        margin: 1em;
+        width: 20em;
+        border-bottom: solid 1px $white;
+        .title-1{
+            margin: 1em;
+            margin-bottom: 0.2em;
+            text-align: left;
+            color:$white;
+            font-family: $code-font;
+            font-size: 1.1em;
+        }
+        .stack-element{
+            background-color: $purple;
+            color: $white;
+            font-size: 0.9em;
+            font-family: $code-font;
+            padding: 0.3em 0.9em 0.3em 0.9em;
+            margin: 10px;
+            border: solid 1px $white;
+            border-radius: 0.5em;
+        }
+    }
+}
+.educacion{
+    background-color: $transparent-detail;
+    padding: 1em;
+    color: $white;
+    font-family: $code-font;
+    margin: 1em;
+    .edu-2,.edu-1{
+        p{
+            font-size: 0.9em;
+        }
+        border-left: solid 1px $white;
+    }
+    .titulo{
+        background-color: $purple;
+        padding: 0.5em;
+        margin: 0em 1.5em 0em 0em;
+    }
+}
+.uni{
+    font-weight: 600;
+}
+.fecha,.uni{
+    margin: 1em;
 }
 
 footer{

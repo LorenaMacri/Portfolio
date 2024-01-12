@@ -4,6 +4,7 @@
   /*HEADER*/
   .header{
     height: 4em;
+    font-size: 1em;
     li {
       float: left;
       a {
@@ -64,6 +65,16 @@ width: 40em;
   }
   .arrow-aboutme{
       font-size: 1.1em;
+  }
+}
+}
+
+@media (min-width: 75em){
+  .stack-icons{
+    .stack-div{
+      margin: 1em;
+      width: 16em;
+  
   }
 }
 }

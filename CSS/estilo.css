@@ -305,6 +305,7 @@ article .presentation li:hover {
   pointer-events: all;
 }
 
+/*ABOUT ME*/
 .aboutme {
   margin: 2em;
   background-color: rgba(121, 121, 121, 0.193);
@@ -353,6 +354,76 @@ article .presentation li:hover {
   text-align: center;
 }
 
+/*STACK Y EDUACION*/
+.stack-edu {
+  margin-top: 4em;
+}
+.stack-edu h6 {
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  text-decoration: none;
+  font-size: 3em;
+  color: rgba(255, 255, 255, 0.882);
+}
+
+.stack-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.stack-icons .stack-div {
+  background: rgba(121, 121, 121, 0.193);
+  justify-content: center;
+  margin: 1em;
+  width: 20em;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.882);
+}
+.stack-icons .stack-div .title-1 {
+  margin: 1em;
+  margin-bottom: 0.2em;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.882);
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1em;
+}
+.stack-icons .stack-div .stack-element {
+  background-color: #6a00e4;
+  color: rgba(255, 255, 255, 0.882);
+  font-size: 0.9em;
+  font-family: "Source Code Pro", monospace;
+  padding: 0.3em 0.9em 0.3em 0.9em;
+  margin: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.882);
+  border-radius: 0.5em;
+}
+
+.educacion {
+  background-color: rgba(121, 121, 121, 0.193);
+  padding: 1em;
+  color: rgba(255, 255, 255, 0.882);
+  font-family: "Source Code Pro", monospace;
+  margin: 1em;
+}
+.educacion .edu-2, .educacion .edu-1 {
+  border-left: solid 1px rgba(255, 255, 255, 0.882);
+}
+.educacion .edu-2 p, .educacion .edu-1 p {
+  font-size: 0.9em;
+}
+.educacion .titulo {
+  background-color: #6a00e4;
+  padding: 0.5em;
+  margin: 0em 1.5em 0em 0em;
+}
+
+.uni {
+  font-weight: 600;
+}
+
+.fecha, .uni {
+  margin: 1em;
+}
+
 footer {
   margin-top: 2em;
   border-top: solid 1.5px rgba(255, 255, 255, 0.882);
@@ -369,6 +440,7 @@ footer i {
   /*HEADER*/
   .header {
     height: 4em;
+    font-size: 1em;
   }
   .header li {
     float: left;
@@ -423,6 +495,12 @@ footer i {
   }
   .aboutme .arrow-aboutme {
     font-size: 1.1em;
+  }
+}
+@media (min-width: 75em) {
+  .stack-icons .stack-div {
+    margin: 1em;
+    width: 16em;
   }
 }
 
